@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+<!-- classPathEntry:jdbc\B5\C4jar·\BE\B6-->
+<classPathEntry location="/usr/java/jdk1.8.0_25/lib/jdbc.jar" />
+<context id="DB2Tables" targetRuntime="MyBatis3">
+<!-- \CA\FD\BEݿ\E2\B5\C4\C5\E4\D6\C3 -->
+<commentGenerator>
+<property name="suppressAllComments" value="true" />
+</commentGenerator>
+<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/web1" userId="root" password="root">
+</jdbcConnection>
+<javaTypeResolver >
+<property name="forceBigDecimals" value="false" />
+</javaTypeResolver>
+<!-- targetProject:自动生成代码的位\E7\BD?-->
+<javaModelGenerator targetPackage="com.spring.model" targetProject="/home/jeizas/software/mybatis/src">
+<property name="enableSubPackages" value="true" />
+<property name="trimStrings" value="true" />
+</javaModelGenerator>
+<sqlMapGenerator targetPackage="com.spring.mapping"  targetProject="/home/jeizas/software/mybatis/src">
+<property name="enableSubPackages" value="true" />
+</sqlMapGenerator>
+<javaClientGenerator type="XMLMAPPER" targetPackage="com.spring.dao"  targetProject="/home/jeizas/software/mybatis/src">
+<property name="enableSubPackages" value="true" />
+</javaClientGenerator>
+<!-- tableName:用于自动生成代码的数据库表；domainObjectName:对应于数据库表的javaBean类名 -->
+<table tableName="admin" domainObjectName="Admin" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"/>
+</context>
+</generatorConfiguration>
